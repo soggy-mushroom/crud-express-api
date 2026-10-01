@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-
+const { port } = require('./config');
 const app = express();
 
 // setup static folder like /public
@@ -16,4 +16,4 @@ app.get('/api/posts', (req, res) => {
  res.json(posts);
 })
 
-app.listen(8000, console.log(`Server is running on port 8000`));
+app.listen(port, console.log(`Server is running on port ${port}`));

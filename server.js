@@ -3,6 +3,10 @@ import port from './config.js';
 import posts from './routes/posts.js';
 const app = express();
 
+// Body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // Routes
 app.use('/api/posts', posts);
 

@@ -1,6 +1,6 @@
-const express = require('express');
-const { port } = require('./config');
-const posts = require('./routes/posts');
+import express from 'express';
+import port from './config.js';
+import posts from './routes/posts.js';
 const app = express();
 
 // Routes

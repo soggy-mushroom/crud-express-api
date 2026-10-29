@@ -45,4 +45,15 @@ router.get('/:id', (req, res) => {
   res.status(201).json(posts);
  });
 
+// update post
+router.put(':/id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const post = posts.find((post) => post.      id === id);
+                                                                                       6 
+  if (!post) {
+    return res.status(404);
+  }
+                                         
+})
+
 export default router;

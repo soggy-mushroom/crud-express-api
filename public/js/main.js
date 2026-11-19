@@ -12,7 +12,7 @@ async function showPosts() {
     const posts = await res.json();
     output.innerHTML = '';
 
-    posts.array.forEach((post) => {
+    posts.forEach((post) => {
       const postEl = document.createElement('div');
       postEl.textContent = post.title;
       output.appendChild(postEl);
